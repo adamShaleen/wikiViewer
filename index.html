@@ -7,9 +7,14 @@
     </head>
     <body>
         <div id="searchContainer">
-            <input id="wikiSearch" type="text"></input>
+            <input id="wikiInput" type="text" placeholder="Search Wikipedia"></input>
+            <button id="wikiSearchButton">Search</button>
+            <button id="wikiRandomButton">Random</button>
         </div>
-        <div id="searchResult"></div>
+        <div id="searchResultContainer">
+            <h3 id="searchTitle"></h3>
+            <p id="searchParagraph"></p>
+        </div>
 
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
