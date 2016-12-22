@@ -12,6 +12,7 @@ $("#wikiSearchButton").click(function() {
 
     if (searchTerm) {
         $("#noEntryMessage").hide();
+        $("#moreSpecificMessage").hide();
         $.ajax({
             type: "GET",
             // setting the origin to * seems to get around the cors issue
@@ -22,32 +23,29 @@ $("#wikiSearchButton").click(function() {
                 var markup = data.parse.text["*"];
 
                 // Setting JSON in a div
-                var display = $("<div></div>").html(markup);
+                var paragraph = $("<div></div>").html(markup);
 
-                // removing links
-                display.find("a").each(function() {
+                //removing unwanted content from return object
+                paragraph.find("a").each(function() {
                     $(this).replaceWith($(this).html());
                 });
-
-                // removing references
-                display.find("sup").remove();
+                // paragraph.find("sup").remove();
+                // paragraph.find("ol").remove();
+                // paragraph.find("div").remove();
+                // paragraph.find("table").remove();
 
                 // title
                 var title = data.parse.displaytitle;
 
-                // paragraph text
-                var paragraph = display.find("p");
-
                 // render to HTML
                 $("#searchTitle").html(title);
-                // $("#image").attr("src", image);
                 $("#searchParagraph").html(paragraph);
 
                 $("#searchResultContainer").fadeIn();
 
             }
         });
-    } else {
+     } else {
         $("#noEntryMessage").show();
     }
 });
