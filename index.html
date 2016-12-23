@@ -6,12 +6,21 @@
         <title>Wikipedia Search</title>
     </head>
     <body>
+        <div id="logo">
+            <h1>wikiSEARCH</h1>
+        </div>
+
         <div id="searchContainer">
             <input id="wikiInput" type="text" placeholder="Search Wikipedia"></input>
             <button id="wikiSearchButton">Search</button>
             <button id="wikiRandomButton">Random</button>
         </div>
-        <p id="noEntryMessage">Please enter search</p>
+
+        <div id="optionalContainer">
+            <p id="noEntryMessage">Please enter search</p>
+            <div id="loader"></div>
+        </div>
+
         <div id="searchResultContainer">
             <h3 id="searchTitle"></h3>
             <p id="searchParagraph"></p>
