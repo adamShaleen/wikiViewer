@@ -1,15 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
 body {
-
-}
-
-#logo {
-    text-align: center;
-    margin-top: 100px;
+    font-family: 'Slabo 27px', serif;
+    margin: auto;
+    background: rgb(29, 28, 29);
+    color: white;
 }
 
 #searchContainer {
     text-align: center;
-    margin: auto;
+    margin-top: 15vh;
+}
+
+#logo {
+    font-size: 3em;
+}
+
+@media (min-width: 768px) {
+    #logo {
+        font-size: 5em;
+    }
+}
+
+button {
+    background: white;
 }
 
 #optionalContainer {
@@ -17,16 +31,26 @@ body {
     text-align: center;
 }
 
-#searchResultContainer {
-    width: 60%;
-    margin: auto;
+#noEntryMessage {
+    color: red;
 }
 
+#searchResultContainer {
+    width: 85%;
+    margin: auto;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    #searchResultContainer {
+        width: 60%;
+    }
+}
 
 #loader {
     margin: auto;
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #2222ff;
+    border-top: 8px solid #3b3b3b;
     border-radius: 50%;
     width: 40px;
     height: 40px;

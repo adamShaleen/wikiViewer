@@ -16,7 +16,6 @@ $("#wikiSearchButton").click(function() {
 
     if (searchTerm) {
         $("#noEntryMessage").hide();
-        $("#moreSpecificMessage").hide();
         $.ajax({
             type: "GET",
             // setting the origin to * seems to get around the cors issue
