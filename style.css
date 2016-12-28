@@ -33,6 +33,14 @@ button {
 
 #noEntryMessage {
     color: red;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#invalidSearchMessage {
+    color: red;
+    margin-top: 50px;
+    text-align: center;
 }
 
 #searchResultContainer {
@@ -49,6 +57,7 @@ button {
 
 #loader {
     margin: auto;
+    margin-top: 50px;
     border: 8px solid #f3f3f3;
     border-top: 8px solid #3b3b3b;
     border-radius: 50%;
