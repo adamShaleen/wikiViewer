@@ -26,7 +26,6 @@ $("#wikiSearchButton").click(function() {
 
                 // if the search isn't a valid word/phrase display the invalid search message
                 if (data.error) {
-                    console.log("HIT");
                     $("#loader").hide();
                     $("#invalidSearchMessage").show();
                 }
@@ -60,7 +59,7 @@ $("#wikiSearchButton").click(function() {
             }
         });
      } else {
-         // if search term is not valid hide and show peoper content
+         // if search term is not valid hide and show proper content
         $("#noEntryMessage").show();
         $("#invalidSearchMessage").hide();
         $("#loader").hide();
