@@ -38,6 +38,7 @@ $("#wikiSearchButton").click(function() {
 
                 // Setting JSON in a div
                 var paragraph = $("<div></div>").html(markup);
+                // var paragraph = $("<div></div>").append(JSON.stringify(markup)); <-- new thing I'm trying
 
                 //removing unwanted content from return object
                 paragraph.find("a").each(function() {$(this).replaceWith($(this).html());});
